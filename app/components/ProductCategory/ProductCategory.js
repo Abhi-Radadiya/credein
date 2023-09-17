@@ -19,7 +19,7 @@ export default function ProductCategory() {
             <div className="product-section px-6 py-[100px]">
                 <div className="mx-auto flex flex-row items-center">
                     {categories.map((el, index) => (
-                        <Card {...el} />
+                        <Card {...el} key={index} />
                     ))}
                 </div>
             </div>
