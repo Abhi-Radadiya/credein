@@ -1,9 +1,12 @@
+import React from "react";
+import Banner from "./components/Banner/Banner";
+import ProductCategory from "./components/ProductCategory/ProductCategory.js";
 
-export default function Home() {
-  return (
-    <main>
-      <div className="h-[18.5rem]">Heelo woel</div>
-    Hello owrld
-    </main>
-  )
+export default function Page() {
+    return (
+        <main>
+            <Banner />
+            <ProductCategory />
+        </main>
+    );
 }

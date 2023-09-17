@@ -1,0 +1,39 @@
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+
+.product-section .product-item {
+    @apply text-center no-underline block relative cursor-pointer pb-[50px] before:absolute before:content-[""] before:h-[0%] before:z-[-1] before:transition-[0.3s] before:duration-[all] before:ease-[ease] before:rounded-[10px] before:bottom-0 before:inset-x-0 hover:before:h-[70%];
+}
+.product-section .product-item .product-thumbnail {
+    @apply relative transition-[0.3s] duration-[all] ease-[ease] mb-[30px] top-0;
+    -webkit-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+}
+
+.product-section .product-item .icon-cross {
+    @apply absolute w-[35px] h-[35px] inline-block -translate-x-2/4 mb-[-17.5px] opacity-0 invisible transition-[0.3s] duration-[all] ease-[ease] rounded-[50%] left-2/4 bottom-[15px];
+    background: #2f2f2f;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+}
+.product-section .product-item .icon-cross img {
+    @apply absolute -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.product-section .product-item:before {
+    background: #dce5e4;
+    -webkit-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+}
+.product-section .product-item:hover .product-thumbnail {
+    @apply top-[-25px];
+}
+.product-section .product-item:hover .icon-cross {
+    @apply opacity-100 visible bottom-0;
+}
